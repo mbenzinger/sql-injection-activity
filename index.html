@@ -9,17 +9,13 @@
 </head>
 <body>
     <!--https://www.w3schools.com/howto/howto_css_login_form.asp-->
-    <form action="action_page.php" method="post">
-        <div class="imgcontainer">
-          <img src="img_avatar2.png" alt="Avatar" class="avatar">
-        </div>
-      
+    <form action="/login" method="post">     
         <div class="container">
           <script>
             if(document.location.hash === '#unauthorized') {
-         document.write('<div class=â€œunauthorizedâ€>Invalid Username or Password</div>');
+         document.write('<div class="unauthorized">Invalid Username or Password</div>');
             } else if(document.location.hash === '#error') {
-         document.write('<div class=â€œerrorâ€>An error has occured</div>');
+         document.write('<div class="error">An error has occured</div>');
             }
           </script>
          

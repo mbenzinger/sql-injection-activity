@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static('.'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-const PORT = process.env.PORT
+
 const db = new sqlite3.Database(':memory:');
 db.serialize(function () {
     db.run("CREATE TABLE user (username TEXT, password TEXT, title TEXT)");
@@ -39,6 +39,6 @@ app.post('/login', (req, res) => {
 })
 
 // LISTEN
-app.listen(PORT, () => {
-    console.log('Listening at port', PORT)
+app.listen(3000, () => {
+    console.log('Listening at port 3000')
 })
